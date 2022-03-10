@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from 'src/app/models/order';
 import { Product } from 'src/app/models/product';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { SendOrderService } from 'src/app/services/send-order.service';
@@ -11,7 +12,8 @@ import { SendOrderService } from 'src/app/services/send-order.service';
 export class CartComponent implements OnInit {
 
   products: Product[] = [];
-  public order: string = "tjosan";
+
+  public order: Order =  { id: 1122, companyID: 32, created: new Date, createdBy: "Henrietta", paymentMethod: "Swish", totalPrice: 200, status: 1, orderRows: [] }
 
   constructor(private service: AddToCartService, private sendOrderService: SendOrderService) { }
 
@@ -26,7 +28,8 @@ export class CartComponent implements OnInit {
     this.service.removeFromCart(i);
   }
 
-  checkout() {
+  checkout(products: Product[]) {
     this.sendOrderService.createOrder(this.order);
+    console.log(products);
   }
 }
