@@ -11,12 +11,11 @@ import { SendOrderService } from 'src/app/services/send-order.service';
 export class CartComponent implements OnInit {
 
   products: Product[] = [];
+  public order: string = "tjosan";
 
   constructor(private service: AddToCartService, private sendOrderService: SendOrderService) { }
 
   ngOnInit(): void {
-
-
     this.service.products$.subscribe((addedTocart : Product[]) => {
       this.products = addedTocart;
     });
@@ -28,8 +27,6 @@ export class CartComponent implements OnInit {
   }
 
   checkout() {
-    //this.sendOrderService.createOrder("test").subscribe(data => {
-
-    //});
+    this.sendOrderService.createOrder(this.order);
   }
 }

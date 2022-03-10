@@ -6,6 +6,9 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class AddToCartService {
+  createOrder() {
+    throw new Error('Method not implemented.');
+  }
 
   productsString : string = localStorage.getItem('products') || '[]';
   private productsInCart : Product[] = JSON.parse(this.productsString);

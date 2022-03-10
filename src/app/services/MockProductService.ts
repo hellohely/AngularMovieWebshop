@@ -1,6 +1,6 @@
 import { Observable, Subject } from "rxjs";
 import { Product } from "../models/product";
-import { IProductService } from "./IProductService";
+import { IProductService } from "../interfaces/IProductService";
 
 export class MockProductService implements IProductService{
     private products = new Subject<Product[]>();
