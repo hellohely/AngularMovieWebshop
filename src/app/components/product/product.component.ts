@@ -14,7 +14,8 @@ export class ProductComponent implements OnInit {
     name: '',
     description: '',
     imageUrl: '',
-    year: 8
+    year: 0,
+    price: 0,
   };
 
   constructor(private service: AddToCartService, private productService: ProductService) {}
