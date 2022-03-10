@@ -26,10 +26,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('webshop');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('webshop app is running!');
-  });
+  // Do I really need this test? 
+  // I don't really want a span that says my app is running...
+ //it('should render title', () => {
+ //   const fixture = TestBed.createComponent(AppComponent);
+ //   fixture.detectChanges();
+ //   const compiled = fixture.nativeElement as HTMLElement;
+ //   expect(compiled.querySelector('.content span')?.textContent).toContain('webshop app is running!');
+ // });
 });

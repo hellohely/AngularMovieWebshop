@@ -1,0 +1,9 @@
+<h1>Kassa</h1>
+
+<ul>
+    <li *ngFor="let p of products; let i = index">
+        <p>{{ p.name }}</p>
+        <button (click)="removeProduct(i)">Remove from cart</button>
+    </li>
+</ul>
+<button>Checkout</button>

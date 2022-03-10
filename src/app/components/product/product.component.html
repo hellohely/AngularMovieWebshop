@@ -1,0 +1,7 @@
+<li>
+    <h3>{{ product.name }}</h3>
+    <img [src]="product.imageUrl"/>
+    <p>{{ product.description }}</p>
+    <p>Year: {{ product.year }} </p>
+    <button (click)="addProduct(product)">Add to cart</button>
+</li>
