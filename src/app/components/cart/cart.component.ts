@@ -13,7 +13,15 @@ export class CartComponent implements OnInit {
 
   products: Product[] = [];
 
-  public order: Order =  { id: 1122, companyID: 32, created: new Date, createdBy: "Henrietta", paymentMethod: "Swish", totalPrice: 200, status: 1, orderRows: [] }
+  public order: Order =  { 
+    id: 0, 
+    companyID: 32, 
+    created: new Date, 
+    createdBy: "Henrietta", 
+    paymentMethod: "Swish", 
+    totalPrice: 200, 
+    status: 1, 
+    orderRows: [] }
 
   constructor(private service: AddToCartService, private sendOrderService: SendOrderService) { }
 

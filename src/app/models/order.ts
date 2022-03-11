@@ -3,7 +3,7 @@ export class Order {
         public id: number,
         public companyID: number,
         public created: Date,
-        public createdBy: any,
+        public createdBy: string,
         public paymentMethod: string,
         public totalPrice: number,
         public status: number,
