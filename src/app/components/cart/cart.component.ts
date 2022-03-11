@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/models/order';
+import { OrderRows } from 'src/app/models/orderRows';
 import { Product } from 'src/app/models/product';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { SendOrderService } from 'src/app/services/send-order.service';
@@ -21,7 +22,8 @@ export class CartComponent implements OnInit {
     paymentMethod: "Swish", 
     totalPrice: 200, 
     status: 1, 
-    orderRows: [] }
+    orderRows: [ { id: 0, productId: 77, product: null, amount: 0, orderId: 0 } ]
+  }
 
   constructor(private service: AddToCartService, private sendOrderService: SendOrderService) { }
 

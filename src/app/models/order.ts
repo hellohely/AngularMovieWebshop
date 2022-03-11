@@ -1,3 +1,5 @@
+import { OrderRows } from "./orderRows";
+
 export class Order {
     constructor (
         public id: number,
@@ -7,6 +9,6 @@ export class Order {
         public paymentMethod: string,
         public totalPrice: number,
         public status: number,
-        public orderRows: [],
+        public orderRows: [OrderRows],
     ){}
 }
