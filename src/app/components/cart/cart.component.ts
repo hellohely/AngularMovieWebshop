@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/models/order';
-import { OrderRows } from 'src/app/models/orderRows';
 import { Product } from 'src/app/models/product';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { SendOrderService } from 'src/app/services/send-order.service';
