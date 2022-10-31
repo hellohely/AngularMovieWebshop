@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
 
 
 
-  //Låt order använda den nya orderRows-arreyen istället för hårdkodade värden
+  
 
   constructor(
     private service: AddToCartService,
@@ -40,29 +40,17 @@ export class CartComponent implements OnInit {
 
     //Mapa produkterna i cart (this.products) och bryt ner objekten till orderRows-object istället
 
-    mappedCart = [{id: 0, productId: 77, product: null, amount: 0, orderId: 0 }];
 
-    mapCart() {  this.products.map((product) => {
-      return this.mappedCart = [
-        {
-          id: 0,
-          productId: product.id,
-          product: null,
-          amount: product.price,
-          orderId: this.order.id,
-        },
-      ];
-    }); }
 
   removeProduct(i: number) {
     this.service.removeFromCart(i);
   }
 
   checkout(products: Product[]) {
-    this.sendOrderService.createOrder(this.order);
-    this.mapCart();
-    console.log(this.mappedCart);
+    //this.sendOrderService.createOrder(this.order);
     console.log(this.products);
+    console.log(this.order);
+    
     
   }
 }
